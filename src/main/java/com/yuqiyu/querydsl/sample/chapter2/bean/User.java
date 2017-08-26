@@ -13,7 +13,7 @@ public class User {
     String name;
     String age;
     @ManyToOne
-    @JoinColumn(name="role_id")
+    @JoinColumn(name = "role_id")
     Role role;
 
 }

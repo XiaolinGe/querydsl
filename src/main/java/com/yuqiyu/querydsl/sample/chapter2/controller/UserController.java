@@ -24,8 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/user")
-public class UserController
-{
+public class UserController {
     @Autowired
     private UserJPA userJPA;
 
@@ -37,19 +36,18 @@ public class UserController
     private JPAQueryFactory queryFactory;
 
     @PostConstruct
-    public void initFactory()
-    {
+    public void initFactory() {
         queryFactory = new JPAQueryFactory(entityManager);
         System.out.println("init JPAQueryFactory successfully");
     }
 
     /**
      * 查询全部数据并根据id倒序
+     *
      * @return
      */
     @RequestMapping(value = "/queryAll")
-    public List<UserBean> queryAll()
-    {
+    public List<UserBean> queryAll() {
         //使用querydsl查询
         QUserBean _Q_user = QUserBean.userBean;
         //查询并返回结果集
@@ -61,12 +59,12 @@ public class UserController
 
     /**
      * 查询详情
+     *
      * @param id 主键编号
      * @return
      */
     @RequestMapping(value = "/detail/{id}")
-    public UserBean detail(@PathVariable("id") Long id)
-    {
+    public UserBean detail(@PathVariable("id") Long id) {
         //使用querydsl查询
         QUserBean _Q_user = QUserBean.userBean;
         //查询并返回结果集
@@ -78,12 +76,12 @@ public class UserController
 
     /**
      * SpringDataJPA & QueryDSL实现单数据查询
+     *
      * @param id
      * @return
      */
     @RequestMapping(value = "/detail_2/{id}")
-    public UserBean detail_2(@PathVariable("id") Long id)
-    {
+    public UserBean detail_2(@PathVariable("id") Long id) {
         //使用querydsl查询
         QUserBean _Q_user = QUserBean.userBean;
         //查询并返回指定id的单条数据
@@ -93,12 +91,12 @@ public class UserController
 
     /**
      * 根据名称模糊查询
+     *
      * @param name
      * @return
      */
     @RequestMapping(value = "/likeQueryWithName")
-    public List<UserBean> likeQueryWithName(String name)
-    {
+    public List<UserBean> likeQueryWithName(String name) {
         //使用querydsl查询
         QUserBean _Q_user = QUserBean.userBean;
 

@@ -19,10 +19,9 @@ import java.io.Serializable;
  */
 @NoRepositoryBean
 public interface BaseJPA<T>
-       extends JpaRepository<T, Long>,
+        extends JpaRepository<T, Long>,
         JpaSpecificationExecutor<T>,
         QueryDslPredicateExecutor<T>,
-        Serializable
-{
+        Serializable {
 
 }

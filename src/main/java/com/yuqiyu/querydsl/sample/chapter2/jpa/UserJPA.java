@@ -12,7 +12,6 @@ import com.yuqiyu.querydsl.sample.chapter2.bean.UserBean;
  * ========================
  */
 public interface UserJPA
-        extends BaseJPA<UserBean>
-{
+        extends BaseJPA<UserBean> {
 
 }

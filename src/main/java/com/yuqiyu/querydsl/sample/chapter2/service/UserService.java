@@ -2,9 +2,7 @@ package com.yuqiyu.querydsl.sample.chapter2.service;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.yuqiyu.querydsl.sample.chapter2.bean.QUser;
-import com.yuqiyu.querydsl.sample.chapter2.bean.QUserBean;
 import com.yuqiyu.querydsl.sample.chapter2.bean.User;
-import com.yuqiyu.querydsl.sample.chapter2.bean.UserBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,9 +25,11 @@ public class UserService {
         queryFactory = new JPAQueryFactory(entityManager);
     }
 
-    public List findAll(){
+    public List findAll() {
         List<User> list = queryFactory.select(QUser.user).from(QUser.user).fetch();
         return list;
     }
+
+
 
 }
