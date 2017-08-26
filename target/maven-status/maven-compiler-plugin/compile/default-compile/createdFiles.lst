@@ -1,0 +1,7 @@
+com/yuqiyu/querydsl/sample/chapter2/Chapter2Application.class
+com/yuqiyu/querydsl/sample/chapter2/ServletInitializer.class
+com/yuqiyu/querydsl/sample/chapter2/bean/UserBean.class
+com/yuqiyu/querydsl/sample/chapter2/jpa/BaseJPA.class
+com/yuqiyu/querydsl/sample/chapter2/bean/QUserBean.class
+com/yuqiyu/querydsl/sample/chapter2/controller/UserController.class
+com/yuqiyu/querydsl/sample/chapter2/jpa/UserJPA.class
