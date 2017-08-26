@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 @AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 
 @Transactional
-public class ExampleNonTransactionalTests {
+public class UserServiceTest {
 
 
     @Autowired
@@ -30,7 +30,7 @@ public class ExampleNonTransactionalTests {
     private TestEntityManager entityManager;
 
     @Test
-    public void test1(){
+    public void testFindAll(){
         User bean  = new User();
         bean.setName("test");
         entityManager.persist(bean);
