@@ -34,4 +34,20 @@ public class UserServiceTest {
         entityManager.persist(bean);
         System.out.println(userService.findAll());
     }
+
+    @Test
+    public void testCount() {
+        System.out.println(userService.count());
+    }
+
+    @Test
+    public void testFindUser() {
+        System.out.println(userService.findUser());
+    }
+
+    @Test
+    public void testFindRole() {
+        System.out.println(userService.findRole());
+    }
+
 }
